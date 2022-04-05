@@ -29,7 +29,7 @@ block main
                             .form-item
                                 h2 Phone Number
                                 if (editing)
-                                    input(type='number' name='phone' required='required' placeholder='Phone Number' value = `${Student.phone}`)                     
+                                    input(type='text' name='phone' required='required' placeholder='Phone Number' value = `${Student.phone}`)                     
                             .form-item
                                 h2 Date of Birth
                                 if (editing)
@@ -67,7 +67,7 @@ block main
                             input(type='textarea' required='required' name='address' placeholder='Address')
                         .form-item
                             h2 Phone Number
-                            input(type='number' name='phone' required='required' placeholder='Phone Number')                        
+                            input(type='text' name='phone' required='required' placeholder='Phone Number')                        
                         .form-item
                             h2 Date of Birth
                             input(type='date' required='required' name='dob')
