@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 
 const errorController = require('./controllers/error')
 const mainRoutes = require('./routes/main');
