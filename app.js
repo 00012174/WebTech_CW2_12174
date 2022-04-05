@@ -26,4 +26,4 @@ app.use(editRoutes)
 app.use(errorController.Error);
 
 
-app.listen(3000)
+app.listen(port)
