@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 1100px;
+    background-color: rgb(245, 242, 197);
+    margin: 0 auto;
+
+}
+
+
+
+.header {
+    padding: 20px 0;
+    background-color: rgb(172, 248, 248);
+}
+
+
+.header__ul {
+    display: flex;
+}
+
+.header__li {
+    list-style: none;
+
+}
+.header__li a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    color: black;
+    font-weight: 400;
+}
+.header__li a:hover, .header__li a:active, .header__li a.active{
+    color: rgb(16, 88, 88);
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65px;
+    background-color: rgb(172, 248, 248);
+    font-weight: 600;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+.main__body {
+    margin: 0 10px;
+    
+}
+
+.main__header {
+    padding: 20px 30px;
+}
+
+
+
+.main__student {
+    margin: 3px 0;
+    padding: 10px 0;
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    display: flex;
+}
+.main__label{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+.main__popup{
+    /*display: none;*/
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    justify-content: space-between;
+    padding: 20px 30px;
+    flex-wrap: wrap;
+}
+
+.student-buttons {
+    display: flex;    
+}
+.popup-item{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.popup-item h2{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.popup-item p{
+    font-style: italic;
+}
+
+.student-buttons a{
+
+    z-index: 5;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    color: white;
+    border: 1.5px black solid;
+    font-weight: 400;
+}
+
+.student-name {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.student-edit{
+    list-style: none;
+    background-color: blue;
+    border: 2px white solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+
+
+.delete-student {
+    
+    
+    
+    margin-right: 20px;
+    z-index: 5;
+    text-decoration: none;
+    margin-left: 20px;
+
+}
+
+.delete-student button{
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1.5px black solid;
+    font-size: 18px;
+    font-weight: 400;
+}

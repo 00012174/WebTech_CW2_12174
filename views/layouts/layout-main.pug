@@ -1,0 +1,21 @@
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block meta
+    body 
+        .wrapper 
+            header.header 
+                nav.header__nav
+                    ul.header__ul
+                        li.header__li
+                            a(href="/", class = (path === '/' ? 'active' : ''))  All Students 
+                        li.header__li
+                            a(href="/admin/new-student", class = (path === '/new-student' ? 'active' : '')) New Student 
+            block main
+            footer.footer 
+                p This web application was created to fulfill Web Technology module’s requirements and does not represent an actual company or service
+    script(src="/js/main.js") 

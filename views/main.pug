@@ -1,0 +1,38 @@
+extends layouts/layout-main.pug
+
+block meta
+    title Student Database  
+    link(rel="stylesheet", href="/css/main.css")
+
+block main
+    main.main 
+        if Students.length > 0
+            .main__body
+                .main__header
+                    h1 All Students
+                .main__list
+                    each student in Students
+                        .main__student
+                            .main__label 
+                                .student-name 
+                                    p #{student.name} #{student.surname}
+                                .student-buttons
+                                    a.student-edit(href=`/edit-student/${student.id}?edit=true`) Edit
+                                    form(class='delete-student' action="/delete-student" method = 'POST') 
+                                        input(type="hidden" value = `${student.id}` name='studentId')
+                                        button(class = 'student-delete' type='submit') Delete 
+                            .main__popup 
+                                .popup-item 
+                                    h2 Address
+                                    p #{student.address}
+                                .popup-item 
+                                    h2 Phone
+                                    p #{student.phone}
+                                .popup-item 
+                                    h2 Date of Birth
+                                    p #{student.dob}
+                                .popup-item 
+                                    h2 Contract Status
+                                    p #{student.status}
+        else 
+            h1.main__header No Students Yet

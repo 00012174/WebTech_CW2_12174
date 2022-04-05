@@ -1,0 +1,85 @@
+extends layouts/layout-main.pug
+
+block meta
+    if (editing)
+        title Edit Student 
+    else 
+        title Add Student
+    
+    link(rel="stylesheet", href="/css/new-student.css")
+
+block main 
+    main.main
+        .main__add
+            if (editing)
+                .main__header Edit Student
+                    form.main__form(action=`/edit-student` method='POST')
+                            .form-item
+                                h2 Name
+                                if (editing)
+                                    input(type='text' required='required' name='name' placeholder='Name' value = `${Student.name}`)
+                            .form-item
+                                h2 Surname
+                                if (editing)
+                                    input(type='text' required='required' name='surname' placeholder='Surname' value = `${Student.surname}`)                               
+                            .form-item
+                                h2 Address
+                                if (editing)
+                                    input(type='textarea' required='required' name='address' placeholder='Address' value = `${Student.address}`)
+                            .form-item
+                                h2 Phone Number
+                                if (editing)
+                                    input(type='number' name='phone' required='required' placeholder='Phone Number' value = `${Student.phone}`)                     
+                            .form-item
+                                h2 Date of Birth
+                                if (editing)
+                                    input(type='date' required='required' name='dob' value = `${Student.dob}`)
+                                
+                            .form-item
+                                h2 Contract Status
+                                if (editing)
+                                    select#student-status(name='status' value = `${Student.status}`)
+                                        option(value='unpaid') Unpaid
+                                        option(value='half-paid') Half Paid
+                                        option(value='full-paid') Full Paid
+                            if (editing)
+                                input(type="hidden" value= `${Student.id}` name ='studentID')
+                            
+                            .form-buttons
+                                if (editing)
+                                    button(type='submit') Edit Student
+                                else 
+                                    button(type='submit') Add Student
+                                    button(type='reset') Reset
+                                
+            else
+                .main__header Add Student
+                    form.main__form(action=`/edit-student` method='POST')
+                        .form-item
+                            h2 Name
+                            input(type='text' required='required' name='name' placeholder='Name')                            
+                        .form-item
+                            h2 Surname
+                            input(type='text' required='required' name='surname' placeholder='Surname')
+                            
+                        .form-item
+                            h2 Address
+                            input(type='textarea' required='required' name='address' placeholder='Address')
+                        .form-item
+                            h2 Phone Number
+                            input(type='number' name='phone' required='required' placeholder='Phone Number')                        
+                        .form-item
+                            h2 Date of Birth
+                            input(type='date' required='required' name='dob')
+                            
+                        .form-item
+                            h2 Contract Status
+                            select#student-status(name='status')
+                                option(value='unpaid') Unpaid
+                                option(value='half-paid') Half Paid
+                                option(value='full-paid') Full Paid
+                        .form-buttons
+                            button(type='submit') Add Student
+                            button(type='reset') Reset
+                            
+

@@ -1,0 +1,36 @@
+extends layouts/layout-main.pug
+
+block meta
+    title Add Student 
+    link(rel="stylesheet", href="/css/new-student.css")
+
+block main 
+    main.main
+        .main__add
+            .main__header Add New Student
+            form.main__form(action='/admin/new-student' method='POST')
+                .form-item
+                    h2 Name
+                    input(type='text' required='required' name='name' placeholder='Name')
+                .form-item
+                    h2 Surname
+                    input(type='text' required='required' name='surname' placeholder='Surname')
+                .form-item
+                    h2 Address
+                    input(type='textarea' required='required' name='address' placeholder='Address')
+                .form-item
+                    h2 Phone Number
+                    input(type='number' name='phone' required='required' placeholder='Phone Number')
+                .form-item
+                    h2 Date of Birth
+                    input(type='date' required='required' name='dob')
+                .form-item
+                    h2 Contract Status
+                    select#student-status(name='status')
+                        option(value='unpaid') Unpaid
+                        option(value='half-paid') Half Paid
+                        option(value='full-paid') Full Paid
+                .form-buttons
+                    button(type='submit') Add Student
+                    button(type='reset') Reset
+
