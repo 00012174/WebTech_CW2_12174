@@ -14,3 +14,4 @@ In order to start the project locally, the user needs to
 -Run 'localhost:3000' in browser
 
 Link to repository on GitHub - https://github.com/00012174/WebTech_CW2_12174
+Link to hosted application - https://cw-web-tech-12174.herokuapp.com/
